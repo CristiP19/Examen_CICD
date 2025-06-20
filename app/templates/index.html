@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Încălțăminte</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Magazin de Încălțăminte</h1>
+</header>
+
+<main>
+    <div class="shoes-container">
+        {% for shoe in shoes %}
+        <div class="shoe-card">
+            <img src="../static/images/{{ shoe.image }}" alt="{{ shoe.name }}">
+            <h3>{{ shoe.name }}</h3>
+            <p class="price">{{ shoe.price }} RON</p>
+            <p class="description">{{ shoe.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Magazin Încălțăminte</p>
+</footer>
+</body>
+</html>
